@@ -46,3 +46,24 @@ empl3.__proto__ = gst;
 //////////////////// Classes
 
 
+class TyotaCar {
+    start(){
+        console.log("start");
+    }
+    stop(){
+        console.log("stop");
+    }
+    setBrand(brand){
+        this.BrandName = brand;
+    }
+}
+// console.log(TyotaCar);
+
+let carFirst = new TyotaCar();
+// console.log(carFirst);
+// console.log(carFirst.start());
+// console.log(carFirst.stop());
+
+carFirst.setBrand("Fortuner");
+
+console.log(carFirst);
