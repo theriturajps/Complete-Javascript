@@ -34,18 +34,21 @@ btnClick.addEventListener("click", () => {
 
 ///////////////////////////// Light|Dark Mode
 
-let modeBtn = document.querySelector("#btnClick");
-
-let defltColor = "light";
+let modeBtn = document.querySelector(".btn");
 let body = document.querySelector("body");
+let defltColor = "light"; // dark
 
-modeBtn.addEventListener("click", () => {
+modeBtn.addEventListener("click", (e) => {
     if (defltColor === "light"){
         defltColor = "dark";
+        body.classList.add("dark");
+        body.classList.remove("light");
     } else {
         defltColor = "light";
+        body.classList.add("light");
+        body.classList.remove("dark");
     }
-    console.log(defltColor);
-})
+    // console.log(defltColor);
+});
 
 // console.log(modeBtn);
