@@ -60,10 +60,12 @@ class TyotaCar {
 // console.log(TyotaCar);
 
 let carFirst = new TyotaCar();
-// console.log(carFirst);
 // console.log(carFirst.start());
 // console.log(carFirst.stop());
 
 carFirst.setBrand("Fortuner");
 
-console.log(carFirst);
+// console.log(carFirst);
+
+
+
