@@ -1,0 +1,44 @@
+html {
+  margin: 0;
+}
+
+span {
+  display: block;
+}
+h2{
+  font-size: 1.1em;
+}
+h1{
+  font-size: 1.5em;
+}
+.canvas {
+  margin: 100px auto 100px;
+  width: 80%;
+  text-align: center;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid black 2px;
+  display: inline-block;
+  margin: 0.5em;
+}
+
+.button:hover{
+  box-shadow: 0 1px 0 1px black;
+}
+
+#grey {
+  background: grey;
+}
+#white {
+  background: white;
+}
+#blue {
+  background: blue;
+}
+#yellow {
+  background: yellow;
+}

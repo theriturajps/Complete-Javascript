@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM learning <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        
+        <input type="password" name="" id="">
+        <input type="name" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+<script>
+
+console.log(document.getElementById('title')); // <h1 id="title" class="heading">
+console.log("---------------------------------------------")
+console.log(document.getElementById('title').id); // title
+console.log(document.getElementById('title').getAttribute('id')); // title
+console.log("---------------------------------------------")
+console.log(document.getElementById('title').getAttribute('class')); // heading
+console.log(document.getElementById('title').className); // heading
+console.log("---------------------------------------------")
+console.log(document.getElementById('title').classList); // [ "heading" ]
+console.log("---------------------------------------------")
+console.log(document.getElementById('title').innerHTML); // DOM learning <span style="display: none;">test text</span>
+console.log(document.getElementById('title').textContent); // DOM learning test text
+console.log(document.getElementById('title').innerText); // DOM learning
+console.log("---------------------------------------------")
+console.log(document.getElementById('title').innerText = "raj");
+console.log(document.getElementById('title').setAttribute('class', 'h1')); // overwrite
+console.log(document.getElementById('title').setAttribute('class', 'h1 heading')); // add h1 and heading into class
+console.log("---------------------------------------------")
+console.log(document.querySelector('h1')); // First H1 value -> <h1 id="title" class="h1 heading">
+console.log(document.querySelectorAll('h1')); // [ h1#title.h1.heading ]
+console.log(document.querySelector('.heading')); // <h1 id="title" class="h1 heading">
+console.log(document.querySelector('input')); // <input id="" type="password" name="">
+console.log(document.querySelector('input[type="name"]')); // <input id="" type="name" name="">
+console.log("---------------------------------------------")
+console.log(document.querySelector('ul')); // <ul>
+console.log("---------------------------------------------")
+const myUl = document.querySelector('ul')
+console.log(myUl.querySelectorAll('li')); // NodeList(4) [ li.list-item, li.list-item, li.list-item, li.list-item ]
+const turnGreen = document.querySelectorAll('li') 
+turnGreen[1].style.backgroundColor = "green"
+turnGreen[1].innerText = "Raj"
+console.log("---------------------------------------------")
+turnGreen.forEach(function (l) {
+    // l.style.backgroundColor = "green"
+})
+console.log("---------------------------------------------")
+console.log(document.getElementsByClassName('list-item')); // HTMLCollection { 0: li.list-item, 1: li.list-item, 2: li.list-item, 3: li.list-item, length: 4 }
+// Convert
+const tempClass = document.getElementsByClassName('list-item')
+const myConvertedArray = Array.from(tempClass) // ab array ban gaya hai
+console.log(myConvertedArray); 
+
+myConvertedArray.forEach( function (li){
+    li.style.backgroundColor = "red"
+    li.style.marginTop = "0.4em"
+})
+
+</script>
+</body>
+</html>
