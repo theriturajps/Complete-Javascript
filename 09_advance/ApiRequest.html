@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: aqua;">
+</body>
+<script>
+
+const userName = 'theriturajps'
+const apiRequest = 'https://api.github.com/users/'
+const githubAPI = apiRequest + userName
+
+const xhr = new XMLHttpRequest();
+xhr.open('GET', githubAPI)
+xhr.onreadystatechange = function(){
+    if(xhr.readyState === 4){
+        const data = JSON.parse(this.responseText);
+        console.log(data.name);
+    }
+}
+xhr.send();
+</script>
+</html>
