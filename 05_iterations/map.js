@@ -8,7 +8,7 @@ const newNum0 = myNumers.map((num) => {return num + 10})
 console.log(newNum0); // [ 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
 
 
-console.log(`------------------------------------------------`);
+console.log(`--------------------- Chaining ---------------------------`)
 
 // Chaining
 
@@ -38,3 +38,4 @@ const nayaNum1 = myNumers
                 .filter( (num) => num >= 125 ) // [ 131, 141, 151, 161, 171, 181, 191, 201 ]
 
 console.log(nayaNum1);
+

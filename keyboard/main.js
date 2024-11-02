@@ -1,18 +1,10 @@
-const insert = document.querySelector('#insert')
+const box = document.querySelector('.msg')
 
 window.addEventListener('keydown', (e) => {
-    insert.innerHTML = `<div class='color'>
-    <table>
-    <tr>
-        <th>Key</th>
-        <th>KeyCode</th>
-        <th>Code</th>
-    </tr>
-    <tr>
-        <td>${e.key}</td>
-        <td>${e.keyCode}</td>
-        <td>${e.code}</td>
-    </tr>
-    </table>
-    </div>`
+  box.innerHTML = `<div class="keyInfo">
+        <div class="key">${e.key}</div>
+        <div class="keyCode">${e.keyCode}</div>
+        <div class="code">${e.code}</div>
+      </div>`
 })
+

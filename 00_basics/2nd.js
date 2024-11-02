@@ -2,7 +2,7 @@
 
 // let a = 6
 // let b = 4
-// console.log("a = ",a, "b = ", b);
+// console.log("a = ", a, "b = ", b);
 // console.log(a * b); // multiply
 // console.log(a + b); // add
 // console.log(a / b); // devide

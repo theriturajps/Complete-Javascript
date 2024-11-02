@@ -65,13 +65,16 @@ __veg.pop()
 // console.log(__veg.toString());
 
 let marvelHeroes = ["iron man", "ant man", "captain america", "thor", "hulk", "the marvel"]
-marvelHeroes.splice(2,2,"raj", "mahavir")
+// console.log(marvelHeroes)
+// marvelHeroes.splice(2,2,"raj", "mahavir")
 // console.log(marvelHeroes);
 
 // console.log(marvelHeroes.slice(1, 3));
 
 
-let numArray = [1,2,3,4,5,6,7,8,9];
+let numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(numArray)
+
 numArray.splice(2, 2, 66, 55);
 // console.log(numArray);
 

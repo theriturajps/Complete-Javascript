@@ -1,14 +1,17 @@
 ////////////////////////////// Classed & Objects //////////////////////////////
 
 const stud = {
-    name: "raj",
-    class: "bsc IT",
+    name_: "raj",
+    class_: "bsc IT",
     roll: 9,
     phn: 9000000001,
-    marks: function (){
-        // console.log(`your phn is `, this.phn);
+    info: function (){
+        let log = `Hi ${this.name_} you calss is ${this.class_}, your roll is ${this.roll} and phn is ${this.phn}`;
+        return log;
     }
 }
+
+console.log(stud.info());
 
 
 const gst = {

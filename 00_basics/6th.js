@@ -9,6 +9,7 @@
 /* function funcName(){
     console.log();
 }
+
 function funcName(param1, param2){
     console.log();
 }
@@ -72,6 +73,11 @@ const arrowMulti = (a, b) => {
 }
 // arrowMulti(2, 3);
 
+
+let name_ = "riturajps"
+// console.log(name_.charAt(0));
+
+
 function countVowl1(str) {
     let count = 0;
     for (const char of str) {
@@ -96,10 +102,6 @@ let countVowl2 = (str) => {
 // countVowl2("ritu");
 
 
-
-
-
-
 //////////////// forEach Loop in Arrays
 
 let state = ["bihar", "delhi", "mumbai"]
@@ -112,6 +114,9 @@ state.forEach((stateValue, stateIndex) => {
     // console.log(stateValue, stateIndex)
 });
 
+state.forEach((value, index, array) => {
+    // console.log(value, index, array);
+})
 
 
 
@@ -128,7 +133,7 @@ numArray.forEach((num) => {
 
 //////////////// Map method in Arrays
 
-let numMap = [6,5,8,7]
+let numMap = [1,2,3,4,5,6,7,8,9]
 
 numMap.map((valueNum) => {
     // console.log(valueNum);

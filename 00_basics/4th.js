@@ -41,4 +41,4 @@ console.log(str.slice(1,5));
 console.log(str.concat(str2));
 console.log(str.replace("R", "T"));
 console.log(str.replaceAll("R", "T"));
-console.log(str.charAt(4));
+console.log(str.charAt(4)); // S

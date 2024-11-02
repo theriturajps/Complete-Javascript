@@ -39,13 +39,6 @@ while (i<=3) {
 
 
 
-
-
-
-
-
-
-
 // do-while loop
 
 /* let i = 0;

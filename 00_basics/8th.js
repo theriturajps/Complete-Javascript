@@ -38,7 +38,7 @@ let modeBtn = document.querySelector(".btn");
 let body = document.querySelector("body");
 let defltColor = "light"; // dark
 
-modeBtn.addEventListener("click", (e) => {
+modeBtn.addEventListener("click", (evnt) => {
     if (defltColor === "light"){
         defltColor = "dark";
         body.classList.add("dark");
