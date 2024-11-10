@@ -116,3 +116,23 @@ function returnSecondValue(getArray){
 
 // console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000]));
+
+
+
+
+
+
+///////// Sum of infinite number inside the arrays.
+
+let result = 0
+
+const sumNumber = (...num) => {
+  for (let i = 0; i < num.length; i++) {
+    const element = num[i]
+    result += element
+  }
+
+  console.log(result)
+}
+
+sumNumber(2, 3, 4)
