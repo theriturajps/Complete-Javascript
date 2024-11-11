@@ -48,13 +48,29 @@ const restaurant = {
   },
 }
 
-
 const menu = [
   ...restaurant.starterMenu,
   ...restaurant.mainMenu
 ]
 
-for (Element of menu) {
-  console.log(Element);
+// get arrays list
+for (let item of menu) {
+  console.log(item);
 }
 
+// get array number
+for (let el of menu.entries()) {
+  console.log(el);
+}
+
+console.log([...menu.entries()]); // [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+
+// get array number with name
+for (let el of menu.entries()) {
+  console.log(`${el[0] + 1} : ${el[1]}`);
+}
+
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i+1} : ${el}`)
+}
