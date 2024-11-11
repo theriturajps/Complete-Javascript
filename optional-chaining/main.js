@@ -84,10 +84,6 @@ for (const day of days) {
 }
 
 
-
-
-
-
 // Method
 
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist'); // (2) ['Gulab Jamun', 'Ice Cream']
