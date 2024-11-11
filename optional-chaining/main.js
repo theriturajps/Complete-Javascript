@@ -70,7 +70,7 @@ console.log(restaurant.openingHours.mon?.open) // undefined
 
 /** Error (Uncaught TypeError)
  * console.log(restaurant.openingHours.mon.open) 
- */
+*/
 
 console.log(restaurant.openingHours?.mon?.open) // undefined
 
