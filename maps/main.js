@@ -64,8 +64,42 @@ rest.set(2, 'USA')
 
 console.log(rest); // Map(3) {'name' => 'raj restro', 1 => 'india', 2 => 'USA'}
 
-rest.set('catg', ['Indian', 'American', 'Italian', 'Desert'])
+rest
+  .set('catg', ['Indian', 'American', 'Italian', 'Desert'])
   .set('open', 11)
   .set('close', 23)
+  .set(true, 'open')
+  .set(false, 'closed')
+
+
+console.log(rest.get(true)) // we are men
+console.log(rest.get('open')) // 11
+console.log(rest.get('catg')) // (4) ['Indian', 'American', 'Italian', 'Desert']
+
+const time = new Date;
+const nowTIme = time.getHours()
+
+console.log(rest.get(nowTIme > rest.get('open') && nowTIme < rest.get('close'))) // open
+
+
+console.log(rest.has('catg')); // true
+
+rest.delete(2) // deleted USA
 
 console.log(rest);
+
+console.log(rest.size); // 7
+
+rest.clear()
+
+console.log(rest.size); 0
+
+rest.set([1, 2], 'test');  console.log(rest); console.log(rest.get([1, 2])) // undefined
+
+let arr = [1,2]
+
+rest.set(arr, 'this is array'); console.log(rest.get(arr)); // this is array
+
+rest.set(document.querySelector('h1'), 'heading')
+
+console.log(rest)
