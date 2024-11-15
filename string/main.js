@@ -112,3 +112,34 @@ console.log(first, last);
 
 const newName = ['Mr.', first, last.toUpperCase()].join(' ') // Mr. Ritu RAJ
 console.log(newName);
+
+
+// Padding
+
+const msg = 'go to gate 23!'
+
+console.log(msg.padStart(25, '+')); // +++++++++++go to gate 23!
+console.log('Raj'.padStart(25, '+')); // ++++++++++++++++++++++Raj
+
+console.log('Raj'.padEnd(25, '+')); // Raj++++++++++++++++++++++
+
+// masking
+
+const makeCc = function (num) {
+  const str = num + ''
+  const last = str.slice(-4)
+  return last.padStart(str.length, '*')
+}
+
+console.log(makeCc('4564587894589')) // *********4589
+
+console.log(makeCc('4564456894589')) // *********4589
+
+console.log(makeCc('45644658945167989')) // *************7989
+
+
+// repeat
+
+
+const msg2 = 'bag weather, all departure is late....'
+console.log(msg2.repeat(5)); // bag weather, all departure is late....bag weather, all departure is late....bag weather, all departure is late....bag weather, all departure is late....bag weather, all departure is late....
