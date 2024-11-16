@@ -171,8 +171,27 @@ const euroWIngs = {
 // Does not work
 // euroWIngs.book(23, 'Khushi')
 
-const book = airIndia.book
 
-book.call(euroWIngs, 234, 'Neha') // call apply bind
+
+// Call Method
+
+const book = airIndia.book 
+
+book.call(euroWIngs, 234, 'Neha')
 
 book.call(airIndia, 897, 'Komal')
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+const swiss = {
+  name: 'Swiss Airline',
+  iataCode: 'SWS',
+  booking: []
+}
+
+book.call(swiss, 897, 'Rohit')
+
+
+// Apply Method
+
