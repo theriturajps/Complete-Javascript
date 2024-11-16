@@ -163,9 +163,9 @@ airIndia.book('123', 'Neha')
 //////////////////////////////////////////////////////////////////////////////
 
 const euroWIngs = {
-	name: 'EuriWings',
-	iataCode: 'EW',
-	booking: []
+  airline: 'EuriWings',
+  iataCode: 'EW',
+  booking: [],
 }
 
 // Does not work
@@ -185,9 +185,9 @@ book.call(airIndia, 897, 'Komal')
 //////////////////////////////////////////////////////////////////////////////
 
 const swiss = {
-  name: 'Swiss Airline',
+  airline: 'Swiss Airline',
   iataCode: 'SWS',
-  booking: []
+  booking: [],
 }
 
 book.call(swiss, 897, 'Rohit') // {name: 'Swiss Airline', iataCode: 'SWS', booking: Array(1)}
@@ -199,5 +199,18 @@ const flightData = [324, 'Neha Rathore']
 book.apply(swiss, flightData) // {name: 'Swiss Airline', iataCode: 'SWS', booking: Array(2)}
 
 book.call(swiss, ...flightData) // {name: 'Swiss Airline', iataCode: 'SWS', booking: Array(3)}
+
+
+// Bind Method
+
+const bookEW = book.bind(euroWIngs)
+const bookAI = book.bind(airIndia)
+const bookSWS = book.bind(swiss)
+
+
+bookEW(867, 'Raj Singh')
+bookAI(865, 'Raj Singh')
+bookSWS(837, 'Raj Singh')
+
 
 
