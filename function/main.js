@@ -243,8 +243,6 @@ document.querySelector('.buy')
 	
 
 
-
-
 // Partial Application
 
 const addTax = (rate, value) => value + value * rate
@@ -255,7 +253,6 @@ const addVat = addTax.bind(null, 0.23)
 // addVat = value => value + value * rate
 
 console.log(addVat(100)); // 123
-
 
 
 
@@ -293,8 +290,6 @@ const poll = {
 		}
 	}
 
-
-
 }
 
 
@@ -302,3 +297,32 @@ document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer
 
 
 poll.displayResults()
+
+
+
+// Immediately Invoked Function Expressions (IIFE)
+
+
+const runOnce = function () {
+	console.log(`This will never run again`);
+}
+
+runOnce();
+
+
+(function () {
+  console.log(`This will never run again`) // Immediately Invoked Function Expressions (IIFE)
+})()
+
+
+// (() => console.log(`This will never run again`))();
+
+
+{
+	const isPirvate = 23
+	var notPrivte = 23
+}
+
+// console.log(isPirvate); 
+console.log(notPrivte)
+
