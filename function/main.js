@@ -190,8 +190,14 @@ const swiss = {
   booking: []
 }
 
-book.call(swiss, 897, 'Rohit')
+book.call(swiss, 897, 'Rohit') // {name: 'Swiss Airline', iataCode: 'SWS', booking: Array(1)}
 
 
 // Apply Method
+
+const flightData = [324, 'Neha Rathore']
+book.apply(swiss, flightData) // {name: 'Swiss Airline', iataCode: 'SWS', booking: Array(2)}
+
+book.call(swiss, ...flightData) // {name: 'Swiss Airline', iataCode: 'SWS', booking: Array(3)}
+
 
