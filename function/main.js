@@ -213,4 +213,52 @@ bookAI(865, 'Raj Singh')
 bookSWS(837, 'Raj Singh')
 
 
+const bookAI498 = book.bind(airIndia, 498)
+bookAI498('Shri')
+bookAI498('Deva')
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+// with eventListiners
+
+airIndia.planes = 300
+
+airIndia.buyPlane = function () {
+	console.log(this)
+
+	this.planes++
+	
+	console.log(this.planes);
+}
+
+// airIndia.buyPlane()
+
+document.querySelector('.buy')
+	.addEventListener(
+		'click',
+		airIndia.buyPlane.bind(
+			airIndia
+		)
+)
+	
+
+
+
+
+// Partial Application
+
+const addTax = (rate, value) => value + value * rate
+
+console.log(addTax(0.10, 200)) // 220
+
+const addVat = addTax.bind(null, 0.23)
+// addVat = value => value + value * rate
+
+console.log(addVat(100)); // 123
+
+
+
+
+
+
 
