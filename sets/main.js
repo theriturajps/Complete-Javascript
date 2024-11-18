@@ -106,3 +106,8 @@ console.log(new Set('r').size) // 1 diffrent latters
 console.log(new Set('raj').size) // 3 diffrent latters
 
 
+const currencies = new Set(['IND', 'DHK', 'USD', 'RBL', 'PND'])
+console.log(currencies);
+currencies.forEach((val, _) => {
+  console.log(`${_} : ${val}`);
+})

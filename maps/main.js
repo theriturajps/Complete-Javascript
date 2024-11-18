@@ -103,3 +103,16 @@ rest.set(arr, 'this is array'); console.log(rest.get(arr)); // this is array
 rest.set(document.querySelector('h1'), 'heading')
 
 console.log(rest)
+
+
+
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+])
+
+currencies.forEach( function (key, val, map){
+    console.log(`${val} -:- ${key} -:- ${map}`)
+  }
+)
