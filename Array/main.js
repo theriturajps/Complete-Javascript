@@ -60,7 +60,23 @@ for (const movement of movements) {
   }
 }
 
+console.log(`------------ seprater ------------------------`)
+
+
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(`Movment ${i + 1} : Deposited ${movement}`)
+  } else {
+    console.log(`Movment ${i + 1} : Withdrown ${Math.abs(movement)}`)
+  }
+}
+
 console.log(`------------ seprater (forEach) ------------------------`)
+
+/*
+movements.forEach((movment) => {})
+*/
+
 
 // using forEach
 movements.forEach(function (movment) {
@@ -71,8 +87,15 @@ movements.forEach(function (movment) {
   }
 })
 
-/*
-movements.forEach((movment) => {})
-*/
+console.log(`------------ seprater ------------------------`)
+
+
+movements.forEach(function (mov, i, arr) {
+	if (mov > 0) {
+    console.log(`Movment ${i + 1} : Deposited ${mov}`)
+  } else {
+    console.log(`Movment ${i + 1} : Withdrown ${Math.abs(mov)}`)
+  }
+})
 
 
