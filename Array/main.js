@@ -99,3 +99,54 @@ movements.forEach(function (mov, i, arr) {
 })
 
 
+////////////// Arrays Practice ///////////////////////////
+
+const juliaDogs = [3, 5, 2, 12, 7]
+const kateDogs = [4, 1, 15, 8, 3]
+
+const checkDogs = (juliaDogs, kateDogs) => {
+
+  const juliaDogsCorrected = juliaDogs.slice()
+  juliaDogsCorrected.splice(-2)
+  juliaDogsCorrected.splice(0, 1)
+
+  const dogs = juliaDogsCorrected.concat(kateDogs)
+
+  dogs.forEach((dog, num) => {
+    if (dog >= 3) {
+      console.log(`Dog number ${num + 1} is an adult and is ${dog} years old.`)
+    } else {
+      console.log(`Dog number ${num + 1} is still a puppy.`)
+    }
+  })
+
+}
+
+checkDogs(juliaDogs, kateDogs)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// map, filter, reduce
+
+//// Map
+const m2 = [200, 450, -400, 3000, -650, -130, 70, 1300]
+
+const eurToUSD = 1.1
+
+const m2Usd = m2.map( (val) => {
+  return Math.floor(val * eurToUSD) // returns an array  
+})
+
+console.log(m2Usd); // (8) [220, 495, -441, 3300, -716, -143, 77, 1430]
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const movUSDfor = []
+for (const mov of m2) { 
+  movUSDfor.push(Math.floor(mov * eurToUSD))
+}
+
+console.log(movUSDfor); // (8) [220, 495, -441, 3300, -716, -143, 77, 1430]
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
