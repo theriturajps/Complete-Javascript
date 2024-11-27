@@ -104,5 +104,43 @@ console.log(9007199254740991111111111111111111111111111111n) // 9007199254740991
 
 console.log(BigInt(9007199254740991111111111111111111111111111111)) // 9007199254740990911454177799317139994366181376n
 
+console.log(`------------------------------------------------------`)
+
+
+console.log(new Date()); // Wed Nov 27 2024 15:52:02
+console.log(Date()); // Wed Nov 27 2024 15:52:24
+
+console.log(new Date('Aug 02 2020 18:05:41')) // Sun Aug 02 2020 18:05:41
+console.log(new Date('December 24, 2015')) // Thu Dec 24 2015 00:00:00
+
+
+console.log(new Date(2037, 10, 19, 15, 23, 5)) // Thu Nov 19 2037 15:23:05
+console.log(new Date(2037, 10, 31)) // Tue Dec 01 2037 00:00:00
+
+console.log(new Date(0)) // Thu Jan 01 1970 05:30:00
+console.log(new Date(3 * 24 * 60 * 60 * 1000)) // Sun Jan 04 1970 05:30:00
+
+console.log(`------------------------------------------------------`)
+
+// Working with dates
+const future = new Date(2037, 10, 19, 15, 23); // Thu Nov 19 2037 15:23:00
+console.log(future);
+
+console.log(future.getFullYear()); // 2037
+console.log(future.getMonth()); // 10
+console.log(future.getDate()); // 19
+console.log(future.getDay()); // 4 (Thu)
+console.log(future.getHours()); // 15
+console.log(future.getMinutes()); // 23
+console.log(future.getSeconds()); // 0
+console.log(future.toISOString()); // 2037-11-19T09:53:00.000Z
+console.log(future.getTime()); // 2142237180000
+
+console.log(new Date(2142237180000)) // Thu Nov 19 2037 15:23:00
+
+console.log(Date.now()) // 1732703561596
+console.log(Date(1732703561596)) // Wed Nov 27 2024 16:03:00
+
+// console.log(new Intl.DateTimeFormat('en-IN').format(now));
 
 
