@@ -14,7 +14,6 @@ const countriesContainer = document.querySelector('.countries')
 
 // XMLHttpRequest (AJAX call)
 
-
 const renderCountry = function (data) {
   const countries = `<article class="country">
           <img class="country__img" src="${data.flags.png}" />
@@ -71,8 +70,4 @@ const displayDataNeighbour = function (country) {
   })
 }
 
-
 displayDataNeighbour('portugal')
-
-
-
