@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+}
+
+body{
+	background-color: rgba(0, 0, 0, 0.808);
+	color: aqua;
+}
+
+h1{
+	display: flexbox;
+	text-align: center;
+	margin-top: 1em;
+}
+
+.btn{
+	display: flexbox;
+	text-align: center;
+	margin-top: 1em;
+}
+
+.btn-country{
+	background-color: bisque;
+	padding: 0.5em;
+	border-radius: .4em;
+	border: none;
+	font-weight: 700;
+}
+
+.output {
+    display: grid;
+    background-color: rgb(29, 31, 30);
+    margin-top: 1em;
+    min-height: 4em;
+    max-width: 300px;
+    gap: 1em;
+    padding: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.2em solid rgb(255, 255, 255);
+    border-radius: 0.4em;
+    color: white;
+}
